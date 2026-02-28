@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated RAG data
+rag/data/*.json
+
+# Local environment variables
+.env

@@ -1,35 +1,38 @@
-import productBlackTea from "@/assets/product-black-tea.jpg";
-import productGreenTea from "@/assets/product-green-tea.jpg";
-import productHerbalTea from "@/assets/product-herbal-tea.jpg";
-import productIcedTea from "@/assets/product-iced-tea.jpg";
-
 const products = [
   {
     id: 1,
     name: "Black Tea",
     description: "Rich & Bold Flavor",
-    image: productBlackTea,
+    image:
+      "https://images.ctfassets.net/e8bhhtr91vp3/4PAC0ucIvPdFB2H7dm88Mt/b740aa9342c9a775f189720b05c16e82/english-breakfast-black-tea-front.webp?w=800&q=70",
+    url: "https://www.lipton.com/us/en/our-teas/English-breakfast-black-tea-20-tea-bags/",
     color: "bg-lipton-dark",
   },
   {
     id: 2,
     name: "Green Tea",
     description: "Fresh & Light",
-    image: productGreenTea,
+    image:
+      "https://images.ctfassets.net/e8bhhtr91vp3/4kGGTZtQHt39xmkkwc7e5i/bbfe5591323cad575152de5c04d1f4ce/lemon-front.webp?w=800&q=70",
+    url: "https://www.lipton.com/us/en/our-teas/lemon-green-tea-20-tea-bags/",
     color: "bg-lipton-green",
   },
   {
     id: 3,
     name: "Herbal Tea",
     description: "Naturally Caffeine Free",
-    image: productHerbalTea,
+    image:
+      "https://images.ctfassets.net/e8bhhtr91vp3/hgRPwKhunTEQJnjxwuYYy/d9eccc6aa0ad4d913acffe8de13b68d3/SmoothMintFOP.png?w=800&q=70",
+    url: "https://www.lipton.com/us/en/our-teas/smooth-mint/",
     color: "bg-lipton-amber",
   },
   {
     id: 4,
     name: "Iced Tea",
     description: "Cool & Refreshing",
-    image: productIcedTea,
+    image:
+      "https://images.ctfassets.net/e8bhhtr91vp3/5eSgxkiUsSWlPa6b9jV0A1/c40488344459f46b78426717d11f11c4/cold-brew-front.webp?w=800&q=70",
+    url: "https://www.lipton.com/us/en/our-teas/cold-brew-family-size-tea-bags/",
     color: "bg-lipton-gold",
   },
 ];
@@ -48,9 +51,12 @@ const ProductGrid = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {products.map((product, index) => (
-            <div
+            <a
               key={product.id}
-              className="card-product group cursor-pointer"
+              href={product.url}
+              target="_blank"
+              rel="noreferrer"
+              className="card-product group cursor-pointer block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative aspect-square overflow-hidden bg-muted">
@@ -72,7 +78,7 @@ const ProductGrid = () => {
                   EXPLORE
                 </button>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
