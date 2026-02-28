@@ -1,5 +1,10 @@
 import { getRagHealth } from "./_engine";
 
+export const config = {
+  runtime: "nodejs",
+  maxDuration: 30,
+};
+
 export default async function handler(_request: any, response: any) {
   try {
     const payload = await getRagHealth();

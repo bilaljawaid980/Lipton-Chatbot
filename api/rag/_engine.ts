@@ -1,8 +1,88 @@
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 import OpenAI from "openai";
 
-import { CHUNKS_FILE, DARAZ_PRODUCTS_FILE, cosineSimilarity, lexicalScore, readJson } from "../../rag/lib";
-import type { Chunk, DarazProduct, QueryResult } from "../../rag/types";
+type Chunk = {
+  id: string;
+  url: string;
+  title: string;
+  text: string;
+  tokenEstimate: number;
+  vector: number[] | null;
+};
+
+type DarazProduct = {
+  title: string;
+  price: string;
+  itemUrl: string;
+  sellerName: string;
+  location: string;
+};
+
+type QueryResult = {
+  chunk: Chunk;
+  score: number;
+};
+
+const DATA_DIR = path.resolve(process.cwd(), "rag", "data");
+const CHUNKS_FILE = path.join(DATA_DIR, "lipton-chunks.json");
+const DARAZ_PRODUCTS_FILE = path.join(DATA_DIR, "daraz-products.json");
+
+const normalizeWhitespace = (text: string) =>
+  text
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .trim();
+
+const cosineSimilarity = (a: number[], b: number[]) => {
+  if (a.length !== b.length || a.length === 0) {
+    return 0;
+  }
+
+  let dot = 0;
+  let normA = 0;
+  let normB = 0;
+
+  for (let index = 0; index < a.length; index += 1) {
+    dot += a[index] * b[index];
+    normA += a[index] * a[index];
+    normB += b[index] * b[index];
+  }
+
+  if (normA === 0 || normB === 0) {
+    return 0;
+  }
+
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+};
+
+const lexicalScore = (query: string, document: string) => {
+  const queryTokens = normalizeWhitespace(query)
+    .toLowerCase()
+    .split(" ")
+    .filter((token) => token.length > 2);
+
+  if (queryTokens.length === 0) {
+    return 0;
+  }
+
+  const documentLower = normalizeWhitespace(document).toLowerCase();
+  let score = 0;
+
+  for (const token of queryTokens) {
+    if (documentLower.includes(token)) {
+      score += 1;
+    }
+  }
+
+  return score / queryTokens.length;
+};
+
+const readJson = async <T>(targetFile: string): Promise<T> => {
+  const content = await readFile(targetFile, "utf8");
+  return JSON.parse(content) as T;
+};
 
 type ChunkPayload = {
   source: string;

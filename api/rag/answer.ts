@@ -2,6 +2,11 @@ import { z } from "zod";
 
 import { answerQuestion } from "./_engine";
 
+export const config = {
+  runtime: "nodejs",
+  maxDuration: 30,
+};
+
 const answerSchema = z.object({
   question: z.string().min(3),
   topK: z.number().min(1).max(8).default(4),
