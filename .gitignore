@@ -26,6 +26,8 @@ dist-ssr
 
 # Generated RAG data
 rag/data/*.json
+!rag/data/lipton-chunks.json
+!rag/data/daraz-products.json
 
 # Local environment variables
 .env

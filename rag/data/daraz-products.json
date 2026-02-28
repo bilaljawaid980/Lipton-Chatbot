@@ -1,0 +1,91 @@
+{
+  "source": "https://www.daraz.pk/catalog/?ajax=true&q=lipton%20tea",
+  "scrapedAt": "2026-02-28T17:19:44.337Z",
+  "count": 12,
+  "products": [
+    {
+      "title": "Lipton Yellow Label Tea - 170g",
+      "price": "Rs. 363",
+      "itemUrl": "https://www.daraz.pk/products/lipton-yellow-label-tea-170g-i655637879.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label Tea 430g",
+      "price": "Rs. 939",
+      "itemUrl": "https://www.daraz.pk/products/lipton-yellow-label-tea-430g-i929904816.html",
+      "sellerName": "Retail - Bundles",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Green Tea Mix Lemon - 25 Tea Bags",
+      "price": "Rs. 271",
+      "itemUrl": "https://www.daraz.pk/products/lipton-green-tea-mix-lemon-25-tea-bags-i388486085.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Green Tea Pack of 3 (Berries + Lemon & Honey + Classic)",
+      "price": "Rs. 789",
+      "itemUrl": "https://www.daraz.pk/products/3-i424756560.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label Tea - 900g - Save Rs. 200",
+      "price": "Rs. 1,780",
+      "itemUrl": "https://www.daraz.pk/products/lipton-yellow-label-tea-900g-save-rs-200-i527711324.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label - Pack of 4 - 430g",
+      "price": "Rs. 3,689",
+      "itemUrl": "https://www.daraz.pk/products/4-430-i331490085.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label - Pack of 2 – 900g",
+      "price": "Rs. 3,594",
+      "itemUrl": "https://www.daraz.pk/products/lipton-yellow-label-pack-of-2-900g-i331484277.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label Tea - 430g - Save Rs. 100",
+      "price": "Rs. 970",
+      "itemUrl": "https://www.daraz.pk/products/430-100-i655644590.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Free Jar with Lipton Yellow Label 900g",
+      "price": "Rs. 1,928",
+      "itemUrl": "https://www.daraz.pk/products/free-jar-with-lipton-yellow-label-900g-i926890285.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Danedar Tea - 900g - Save Rs. 200",
+      "price": "Rs. 1,871",
+      "itemUrl": "https://www.daraz.pk/products/900-200-i527712992.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "Lipton Yellow Label Tea - 85g - Save Rs. 20",
+      "price": "Rs. 190",
+      "itemUrl": "https://www.daraz.pk/products/lipton-yellow-label-tea-85g-save-rs-20-i655641622.html",
+      "sellerName": "Retail - Lipton",
+      "location": "Punjab"
+    },
+    {
+      "title": "BUY 2 GET 1 - LIPTON GREEN TEA MIX BERRIES 25S",
+      "price": "Rs. 554",
+      "itemUrl": "https://www.daraz.pk/products/buy-2-get-1-lipton-green-tea-mix-berries-25s-i883728869.html",
+      "sellerName": "Daraz Retail Seller",
+      "location": "Punjab"
+    }
+  ]
+}
