@@ -1,6 +1,6 @@
 # Lipton Chatbot
 
-This repository contains a Lipton-themed React frontend and a Node/TypeScript RAG backend used to answer tea-related questions from scraped Lipton content.
+This repository contain a Lipton-themed React frontend and a Node/TypeScript RAG backend used to answer tea-related questions from scraped Lipton content.
 
 ## Local development
 
